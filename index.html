@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aftab Steel Works - Khanpur, Chakwal</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="20251206_112334.jpg">
+    <style>
+        :root {
+            --primary: #d4af37; /* Gold color taken from the gates */
+            --dark: #1a1a1a;
+            --light: #f4f4f4;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .urdu-font {
+            font-family: 'Noto Nastaliq Urdu', serif;
+            direction: rtl;
+            line-height: 2;
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hover-zoom {
+            transition: transform 0.3s ease;
+        }
+        .hover-zoom:hover {
+            transform: scale(1.02);
+        }
+
+        /* Hero Background */
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('20251206_112334.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <nav class="bg-gray-900 text-white p-4 sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-hammer text-yellow-500 text-2xl"></i>
+                <h1 class="text-xl md:text-2xl font-bold tracking-wider" data-en="Aftab Steel Works" data-ur="آفتاب اسٹیل ورکس">Aftab Steel Works</h1>
+            </div>
+            
+            <div class="hidden md:flex gap-6 items-center">
+                <a href="#home" class="hover:text-yellow-500 transition" data-en="Home" data-ur="ہوم">Home</a>
+                <a href="#about" class="hover:text-yellow-500 transition" data-en="About Us" data-ur="ہمارے بارے میں">About Us</a>
+                <a href="#gallery" class="hover:text-yellow-500 transition" data-en="Gallery" data-ur="گیلری">Gallery</a>
+                <a href="#contact" class="hover:text-yellow-500 transition" data-en="Contact" data-ur="رابطہ">Contact</a>
+                <button onclick="toggleLanguage()" class="bg-yellow-500 text-black px-4 py-1 rounded-full font-bold hover:bg-yellow-400 transition">
+                    <span id="lang-btn-text">اردو</span>
+                </button>
+            </div>
+
+            <button class="md:hidden text-2xl" onclick="toggleMobileMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden flex-col bg-gray-800 p-4 space-y-3 mt-2">
+            <a href="#home" class="block hover:text-yellow-500" data-en="Home" data-ur="ہوم">Home</a>
+            <a href="#about" class="block hover:text-yellow-500" data-en="About Us" data-ur="ہمارے بارے میں">About Us</a>
+            <a href="#gallery" class="block hover:text-yellow-500" data-en="Gallery" data-ur="گیلری">Gallery</a>
+            <a href="#contact" class="block hover:text-yellow-500" data-en="Contact" data-ur="رابطہ">Contact</a>
+            <button onclick="toggleLanguage()" class="bg-yellow-500 text-black px-4 py-1 w-full rounded font-bold">
+                Change Language
+            </button>
+        </div>
+    </nav>
+
+    <header id="home" class="hero-bg h-screen flex items-center justify-center text-center text-white px-4">
+        <div class="max-w-3xl fade-in">
+            <h2 class="text-4xl md:text-6xl font-bold mb-4" data-en="Mastery in Metal" data-ur="لوہے کے کام میں مہارت">Mastery in Metal</h2>
+            <p class="text-xl md:text-2xl mb-8 text-gray-200" data-en="Aftab Steel Works Khanpur, Chakwal" data-ur="آفتاب اسٹیل ورکس، خان پور، چکوال">Aftab Steel Works Khanpur, Chakwal</p>
+            <p class="text-lg mb-8" data-en="Premium Gates, Grills, and Custom Steel Fabrication." data-ur="اعلیٰ معیار کے گیٹس، گرلز اور کسٹم اسٹیل کا کام">Premium Gates, Grills, and Custom Steel Fabrication.</p>
+            <a href="#contact" class="bg-yellow-500 text-black px-8 py-3 rounded-full font-bold text-lg hover:bg-yellow-400 transition transform hover:scale-105" data-en="Contact Us Now" data-ur="ابھی رابطہ کریں">Contact Us Now</a>
+        </div>
+    </header>
+
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900 border-b-4 border-yellow-500 inline-block pb-2" data-en="Why Choose Aftab Steel Works?" data-ur="آفتاب اسٹیل ورکس کا انتخاب کیوں؟">Why Choose Aftab Steel Works?</h2>
+                
+                <div class="text-lg text-gray-600 leading-relaxed text-content" 
+                     data-en="At Aftab Steel Works, located in the heart of Khanpur, Chakwal, we believe that steel is not just a material—it is a canvas for security and beauty. For years, we have served our community with unwavering dedication, providing high-quality welding and fabrication services that stand the test of time. Whether you need a majestic laser-cut main gate to enhance your home's entrance, sturdy window grills for security, or custom furniture frames, our craftsmanship is second to none. We pride ourselves on using the finest quality iron and steel, ensuring rust resistance and durability. Our customers trust us because we deliver not just products, but peace of mind. We combine traditional welding techniques with modern designs to create masterpieces that are strong, stylish, and affordable."
+                     data-ur="خان پور، چکوال کے دل میں واقع آفتاب اسٹیل ورکس میں، ہم یقین رکھتے ہیں کہ اسٹیل صرف ایک مواد نہیں ہے بلکہ یہ حفاظت اور خوبصورتی کا ایک ذریعہ ہے۔ برسوں سے، ہم نے اپنی کمیونٹی کی خدمت پوری لگن کے ساتھ کی ہے اور اعلیٰ معیار کی ویلڈنگ اور فیبریکیشن کی خدمات فراہم کی ہیں جو وقت کے ساتھ قائم رہتی ہیں۔ چاہے آپ کو اپنے گھر کے داخلی راستے کو خوبصورت بنانے کے لیے لیزر کٹ مین گیٹ کی ضرورت ہو، حفاظت کے لیے مضبوط کھڑکیوں کی گرلز ہوں، یا کسٹم فرنیچر کے فریم، ہماری کاریگری بے مثال ہے۔ ہمیں فخر ہے کہ ہم بہترین معیار کا لوہا اور اسٹیل استعمال کرتے ہیں جو زنگ سے محفوظ اور پائیدار ہوتا ہے۔ ہمارے صارفین ہم پر بھروسہ کرتے ہیں کیونکہ ہم صرف مصنوعات نہیں بلکہ ذہنی سکون فراہم کرتے ہیں۔ ہم روایتی ویلڈنگ کی تکنیکوں کو جدید ڈیزائنوں کے ساتھ ملا کر ایسے شاہکار تخلیق کرتے ہیں جو مضبوط، اسٹائلش اور سستے ہوتے ہیں۔">
+                    At Aftab Steel Works, located in the heart of Khanpur, Chakwal, we believe that steel is not just a material—it is a canvas for security and beauty. For years, we have served our community with unwavering dedication, providing high-quality welding and fabrication services that stand the test of time...
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                    <div class="p-6 bg-gray-50 rounded-lg shadow-md hover:-translate-y-2 transition duration-300">
+                        <i class="fa-solid fa-shield-halved text-4xl text-yellow-500 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2" data-en="Trusted Quality" data-ur="قابل اعتماد معیار">Trusted Quality</h3>
+                        <p data-en="Heavy gauge material that lasts a lifetime." data-ur="بھاری گیج کا مواد جو زندگی بھر چلتا ہے۔">Heavy gauge material that lasts a lifetime.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-lg shadow-md hover:-translate-y-2 transition duration-300">
+                        <i class="fa-solid fa-compass-drafting text-4xl text-yellow-500 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2" data-en="Modern Designs" data-ur="جدید ڈیزائن">Modern Designs</h3>
+                        <p data-en="CNC Laser cutting and modern aesthetic gates." data-ur="سی این سی لیزر کٹنگ اور جدید خوبصورت گیٹس۔">CNC Laser cutting and modern aesthetic gates.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-lg shadow-md hover:-translate-y-2 transition duration-300">
+                        <i class="fa-solid fa-hand-holding-dollar text-4xl text-yellow-500 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2" data-en="Fair Pricing" data-ur="مناسب قیمت">Fair Pricing</h3>
+                        <p data-en="Best market rates without compromising quality." data-ur="معیار پر سمجھوتہ کیے بغیر مارکیٹ کے بہترین نرخ۔">Best market rates without compromising quality.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-10 text-center text-gray-900" data-en="Our Recent Work" data-ur="ہمارا حالیہ کام">Our Recent Work</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in hover-zoom">
+                    <img src="20241102_092458.jpg" alt="Laser Cut Gate" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg">CNC Laser Design</h3>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in hover-zoom">
+                    <img src="20251206_112334.jpg" alt="Luxury Black Gold Gate" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg">Royal Black & Gold Gate</h3>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in hover-zoom">
+                    <img src="20241124_093257.jpg" alt="White Grill Design" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg">Modern Safety Grill</h3>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in hover-zoom">
+                    <img src="20251002_105717.jpg" alt="Curved Gold Grill" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg">Custom Artistic Work</h3>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in hover-zoom">
+                    <img src="20241124_090643.jpg" alt="Yellow Laser Door" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg">Full Sheet Laser Door</h3>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in hover-zoom">
+                    <img src="20251022_145249.jpg" alt="Shop Front Gate" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg">Heavy Duty Sliding Gate</h3>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in hover-zoom">
+                    <img src="20251105_140222.jpg" alt="Door Frame" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg">Strong Iron Door</h3>
+                    </div>
+                </div>
+
+                 <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in hover-zoom">
+                    <img src="20251105_130430.jpg" alt="Black Sheet Gate" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg">Solid Sheet Gate</h3>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in hover-zoom">
+                    <img src="20241023_181539.jpg" alt="Window Safety" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg">Window Safety Grill</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-gray-900 text-white relative">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                
+                <div class="fade-in">
+                    <h2 class="text-3xl font-bold mb-6 text-yellow-500" data-en="Get In Touch" data-ur="رابطہ کریں">Get In Touch</h2>
+                    <p class="mb-8 text-gray-400" data-en="We are ready to build your dream project. Contact us today for a quote." data-ur="ہم آپ کا خوابیدہ پروجیکٹ بنانے کے لیے تیار ہیں۔ کوٹیشن کے لیے آج ہی ہم سے رابطہ کریں۔">We are ready to build your dream project. Contact us today for a quote.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-green-600 p-3 rounded-full"><i class="fa-brands fa-whatsapp text-2xl"></i></div>
+                            <div>
+                                <p class="text-sm text-gray-400">WhatsApp</p>
+                                <a href="https://wa.me/923125779866" class="text-xl font-bold hover:text-yellow-500">+92 312 5779866</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div class="bg-blue-600 p-3 rounded-full"><i class="fa-solid fa-phone text-2xl"></i></div>
+                            <div>
+                                <p class="text-sm text-gray-400" data-en="Phone" data-ur="فون">Phone</p>
+                                <a href="tel:+923335779866" class="text-xl font-bold hover:text-yellow-500">+92 333 5779866</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div class="bg-red-600 p-3 rounded-full"><i class="fa-solid fa-envelope text-2xl"></i></div>
+                            <div>
+                                <p class="text-sm text-gray-400">Email</p>
+                                <a href="mailto:khokharaftab623@gmail.com" class="text-lg font-bold hover:text-yellow-500">khokharaftab623@gmail.com</a>
+                            </div>
+                        </div>
+
+                         <div class="flex items-center gap-4">
+                            <div class="bg-gray-700 p-3 rounded-full"><i class="fa-solid fa-location-dot text-2xl"></i></div>
+                            <div>
+                                <p class="text-sm text-gray-400" data-en="Address" data-ur="پتہ">Address</p>
+                                <p class="text-lg">Jhelum Road Khanpur, Chakwal, Pakistan</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="h-80 md:h-auto bg-gray-800 rounded-lg overflow-hidden fade-in border-4 border-gray-700">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107198.0560935541!2d72.7844!3d32.9329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3921759b30742e9d%3A0xa1263013d30800b7!2sKhanpur%2C%20Chakwal%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1716300000000!5m2!1sen!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                 <a href="https://www.google.com/maps/place/Aftab+steel+welding+works/@32.9126251,73.0532925,17z/data=!4m14!1m7!3m6!1s0x392041d043bcdaaf:0xfe1358dc56905d4b!2sAftab+steel+welding+works!8m2!3d32.9126206!4d73.0558728!16s%2Fg%2F11t6tn_h6v!3m5!1s0x392041d043bcdaaf:0xfe1358dc56905d4b!8m2!3d32.9126206!4d73.0558728!16s%2Fg%2F11t6tn_h6v?entry=ttu&g_ep=EgoyMDI2MDIwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="inline-block bg-white text-gray-900 px-6 py-2 rounded shadow hover:bg-gray-200 transition">
+                    <i class="fa-solid fa-map-location-dot mr-2"></i> Open Location Link
+                 </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-center py-6 text-gray-500 text-sm">
+        <p>&copy; Aftab Steel Works.</p>
+    </footer>
+
+    <script>
+        // Language Toggle Logic
+        let currentLang = 'en';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'ur' : 'en';
+            const elements = document.querySelectorAll('[data-en]');
+            const btnText = document.getElementById('lang-btn-text');
+            const body = document.body;
+
+            elements.forEach(el => {
+                if (currentLang === 'ur') {
+                    el.innerText = el.getAttribute('data-ur');
+                    el.classList.add('urdu-font');
+                    // Increase font size slightly for Urdu as it can be small
+                    if(el.tagName === 'P' || el.tagName === 'DIV') {
+                        el.classList.add('text-xl'); 
+                    }
+                } else {
+                    el.innerText = el.getAttribute('data-en');
+                    el.classList.remove('urdu-font');
+                    if(el.tagName === 'P' || el.tagName === 'DIV') {
+                        el.classList.remove('text-xl');
+                    }
+                }
+            });
+
+            if (currentLang === 'ur') {
+                btnText.innerText = 'English';
+                body.style.textAlign = 'right';
+            } else {
+                btnText.innerText = 'اردو';
+                body.style.textAlign = 'left';
+            }
+        }
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Intersection Observer for Scroll Animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
